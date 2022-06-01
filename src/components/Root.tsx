@@ -6,7 +6,7 @@ const Root = () => {
       <Link href="/">Root</Link>
       <Link href="/user">User</Link>
     </div>
-  )
+  );
 };
 
 export { Root };
