@@ -32,7 +32,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pnpm format && pnpm lint"
+      "pre-commit": "pnpm prettier --write . && pnpm eslint . --fix"
     }
   }
 }
