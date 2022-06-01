@@ -7,7 +7,8 @@
     "build": "vite build",
     "serve": "vite preview",
     "lint": "pnpm eslint . --fix",
-    "format": "pnpm prettier --write ."
+    "format": "pnpm prettier --write .",
+    "prepare": "husky install"
   },
   "license": "MIT",
   "devDependencies": {
@@ -16,6 +17,7 @@
     "autoprefixer": "^10.4.7",
     "eslint": "^8.16.0",
     "eslint-config-google": "^0.14.0",
+    "husky": "^8.0.1",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",
     "prettier-eslint": "^15.0.1",
@@ -28,5 +30,10 @@
   "dependencies": {
     "solid-app-router": "^0.3.3",
     "solid-js": "^1.4.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnpm prettier --write . && pnpm eslint . --fix"
+    }
   }
 }
